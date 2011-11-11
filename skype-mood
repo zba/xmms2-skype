@@ -1,0 +1,26 @@
+#!/usr/bin/python
+import sys 
+import Skype4Py
+import pprint
+
+def dump(obj):
+  for attr in dir(obj):
+    print "obj.%s = %s" % (attr, getattr(obj, attr))
+
+status=unicode(sys.argv[1],errors='ignore');
+skype = Skype4Py.Skype()
+
+# Attach to Skype client
+skype.Attach()
+
+profile=skype.CurrentUserProfile
+
+print status
+
+print profile.MoodText
+
+if  status != profile.MoodText :
+	print "setting status"
+	profile.MoodText=status
+
+#dump(profile)

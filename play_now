@@ -1,0 +1,5 @@
+#!/bin/sh
+while :;do
+skype-mood "`xmms2 current|iconv -f utf-8 -t utf-8`" >/dev/null
+sleep 10
+done &
