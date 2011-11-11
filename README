@@ -1,0 +1,10 @@
+Install:
+install Skype4Py library: 
+for Debian: 
+apt-get install python-skype
+place files somewhere in PATH
+
+Run:
+run xmms2_play_now
+confirm program python-mood to allow use skype
+
